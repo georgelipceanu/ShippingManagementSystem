@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ship.controllers.DrillDownAPI">
+   <children>
+      <HBox prefHeight="93.0" prefWidth="900.0" />
+      <HBox alignment="CENTER" prefHeight="350.0" prefWidth="900.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="350.0" prefWidth="723.0">
+               <children>
+                  <ListView fx:id="drillDownView" prefHeight="350.0" prefWidth="253.0" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#drillDown" prefHeight="60.0" prefWidth="134.0" text="Drill Down Further" />
+         </children></HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="372.0" prefHeight="80.0" prefWidth="900.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBack" prefHeight="60.0" prefWidth="134.0" text="Go Back" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

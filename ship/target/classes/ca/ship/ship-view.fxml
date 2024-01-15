@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ship.controllers.ShipAPI">
+   <children>
+      <HBox alignment="CENTER" prefHeight="74.0" prefWidth="900.0" spacing="10.0">
+         <children>
+            <TextField fx:id="name" prefHeight="36.0" prefWidth="151.0" promptText="Ship Name" />
+            <TextField fx:id="flagState" layoutX="170.0" layoutY="24.0" prefHeight="36.0" prefWidth="151.0" promptText="Flag State" />
+            <TextField fx:id="shipIdentifier" layoutX="380.0" layoutY="24.0" prefHeight="36.0" prefWidth="151.0" promptText="ID" />
+            <TextField fx:id="photograph" layoutX="176.0" layoutY="25.0" prefHeight="36.0" prefWidth="151.0" promptText="PhotoURL" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox prefHeight="93.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="186.0" prefWidth="598.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="119.0" prefWidth="600.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addShipAtSea" prefHeight="60.0" prefWidth="134.0" text="Add Ship at Sea" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="186.0" prefWidth="590.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="119.0" prefWidth="390.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <ChoiceBox fx:id="ports" prefWidth="150.0" />
+                        <Button mnemonicParsing="false" onAction="#addShipAtPort" prefHeight="60.0" prefWidth="134.0" text="Add Ship to Port" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="350.0" prefWidth="900.0">
+         <children>
+            <ListView fx:id="listOfShip" prefHeight="350.0" prefWidth="386.0" />
+            <VBox alignment="CENTER" prefHeight="350.0" prefWidth="116.0">
+               <children>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#launchShip" prefHeight="60.0" prefWidth="134.0" text="Set out to Sea" />
+                  <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#dockShip" prefHeight="60.0" prefWidth="134.0" text="Dock Ship" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="134.0" text="View Ship" onAction="#drillDown"/>
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="372.0" prefHeight="80.0" prefWidth="900.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBack" prefHeight="60.0" prefWidth="134.0" text="Go Back" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
